@@ -8,8 +8,6 @@ Mọi số liệu trong bản mặc định đều là **fake/demo**, mục đí
 - Tự custom thành dự án cá nhân
 - Show portfolio trên GitHub / GitHub Pages
 
-> ⚠️ Dự án này **không phải** bản official của [nuoitoi.com](https://nuoitoi.com).  
-> Toàn bộ code, text, layout được viết lại theo kiểu parody để tránh đụng chạm bản quyền.
 
 ---
 
@@ -36,9 +34,9 @@ Mọi số liệu trong bản mặc định đều là **fake/demo**, mục đí
 
 ## 🛠 Tech stack
 
-- **HTML5** thuần cho cấu trúc.
-- **CSS3** thuần (không framework) – tập trung gradient, card, glassmorphism nhẹ.
-- **JavaScript** thuần:
+- **HTML5**.
+- **CSS3**.
+- **JavaScript**:
   - Fake dữ liệu chi tiêu / donate
   - Update số liệu, thanh tiến độ
   - Fake realtime log
