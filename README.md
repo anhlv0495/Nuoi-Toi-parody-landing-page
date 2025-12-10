@@ -2,13 +2,6 @@
 # 🥣 Nuôi Tôi – Landing page minh bạch, vui vẻ, không drama
 
 Đây là một **landing page parody** kiểu “nuôi tôi mỗi tháng”, tập trung vào sự **minh bạch chi tiêu** và tấu hài là chính.  
-Mọi số liệu trong bản mặc định đều là **fake/demo**, mục đích để bạn:
-
-- Dùng làm playground HTML/CSS/JS
-- Tự custom thành dự án cá nhân
-- Show portfolio trên GitHub / GitHub Pages
-
-
 ---
 
 ## ✨ Tính năng chính
