@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <title>Nuôi Tôi - Minh bạch từng đồng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+        name="description"
+        content="Trang donate vui vẻ: nuôi tôi mỗi tháng và nhận sao kê minh bạch từng đồng."
+    />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-content">
+        <div class="logo">
+            <span class="logo-mark">NT</span>
+            <span class="logo-text">NUÔI TÔI</span>
+        </div>
+        <nav class="nav">
+            <a href="#why">Tại sao?</a>
+            <a href="#promise">Cam kết</a>
+            <a href="#usage">Chi tiêu</a>
+            <a href="#donate">Donate</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-left">
+                <p class="hero-tag">Trang vui vẻ • Không lùa gà</p>
+                <h1>Hãy <span class="highlight">nuôi tôi</span> một cách minh bạch.</h1>
+                <p class="hero-subtitle">
+                    Bạn gửi tiền, tôi ăn – nhưng mỗi đồng đều được ghi lại.
+                    Sao kê tự động, bảng chi tiêu rõ ràng, không mập mờ.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#donate" class="btn btn-primary">NUÔI TÔI NGAY</a>
+                    <a href="#live-log" class="btn btn-ghost">Xem log realtime</a>
+                </div>
+
+                <div class="hero-metrics">
+                    <div class="metric">
+                        <div class="metric-value" id="total-donate">0₫</div>
+                        <div class="metric-label">Tổng donate tháng này</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="supporters-count">0</div>
+                        <div class="metric-label">Người đang nuôi tôi</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="transparency-score">300%</div>
+                        <div class="metric-label">Chỉ số minh bạch</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="card card-hero">
+                    <h2>Sao kê hôm nay</h2>
+                    <ul class="transactions" id="today-transactions">
+                        <!-- script.js sẽ fill -->
+                    </ul>
+                    <div class="card-footer">
+                        Cập nhật mỗi <span id="update-interval">5</span> giây ·
+                        <span class="dot dot-live"></span> Đang live
+                    </div>
+                </div>
+
+                <div class="card card-progress">
+                    <h3>Mục tiêu tháng này</h3>
+                    <p>Đủ tiền ăn cơm & mì tôm, không cần ăn mì tôm 3 bữa.</p>
+                    <div class="progress-wrapper">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span id="progress-percent">0%</span>
+                            <span id="progress-detail">0 / 3.000.000₫</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY -->
+    <section id="why" class="section">
+        <div class="container">
+            <h2 class="section-title">Tại sao nên nuôi tôi?</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Sao kê realtime</h3>
+                    <p>
+                        Mỗi khoản chi đều được ghi lại, hiển thị trên trang.
+                        Bạn có thể xem tôi vừa ăn gì, uống gì, tiêu gì.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Không màu mè</h3>
+                    <p>
+                        Không câu chuyện cảm động, không drama.
+                        Chỉ đơn giản là: tôi nghèo, bạn có điều kiện, thế thôi.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Đơn giản & minh bạch</h3>
+                    <p>
+                        Cơ cấu chi tiêu rõ ràng: ăn, ở, điện nước, học, sức khỏe.
+                        Không có hàng hiệu, siêu xe, penthouse.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARISON -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">So sánh cho vui</h2>
+            <div class="compare-grid">
+                <div class="card card-contrast">
+                    <h3>Người ta thường:</h3>
+                    <ul class="list-cross">
+                        <li>Sao kê lâu lâu mới có, hoặc không bao giờ.</li>
+                        <li>Ảnh chụp mờ, số liệu khó đọc.</li>
+                        <li>Khi hỏi nhiều thì im lặng.</li>
+                    </ul>
+                </div>
+                <div class="card card-contrast card-contrast-ok">
+                    <h3>Còn tôi thì:</h3>
+                    <ul class="list-check">
+                        <li>Log realtime, update liên tục.</li>
+                        <li>Số liệu từng đồng, ghi rõ mục đích.</li>
+                        <li>Có phần “log ngớ ngẩn” để bạn đọc cho vui.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPENDING BREAKDOWN -->
+    <section id="usage" class="section">
+        <div class="container">
+            <h2 class="section-title">Tiền của bạn sẽ đi đâu?</h2>
+            <div class="usage-grid">
+                <div class="usage-list">
+                    <div class="usage-item">
+                        <span class="usage-percent">40%</span>
+                        <div>
+                            <h3>Ăn uống</h3>
+                            <p>Cơm, mì, trứng, rau – menu nghèo nhưng ấm bụng.</p>
+                        </div>
+                    </div>
+                    <div class="usage-item">
+                        <span class="usage-percent">20%</span>
+                        <div>
+                            <h3>Điện, nước, internet</h3>
+                            <p>Để còn lên mạng cập nhật sao kê cho bạn.</p>
+                        </div>
+                    </div>
+                    <div class="usage-item">
+                        <span class="usage-percent">15%</span>
+                        <div>
+                            <h3>Tiền phòng</h3>
+                            <p>Phòng trọ nhỏ, không view sông, không bồn tắm.</p>
+                        </div>
+                    </div>
+                    <div class="usage-item">
+                        <span class="usage-percent">10%</span>
+                        <div>
+                            <h3>Sức khỏe</h3>
+                            <p>Thuốc cảm, vitamin, mấy thứ cơ bản để không đổ bệnh.</p>
+                        </div>
+                    </div>
+                    <div class="usage-item">
+                        <span class="usage-percent">10%</span>
+                        <div>
+                            <h3>Học & nâng cấp bản thân</h3>
+                            <p>Sách, khóa học, tài liệu – biết đâu sau này giàu.</p>
+                        </div>
+                    </div>
+                    <div class="usage-item">
+                        <span class="usage-percent">5%</span>
+                        <div>
+                            <h3>Giải trí lành mạnh</h3>
+                            <p>Cà phê vỉa hè, thỉnh thoảng xem phim rẻ tiền.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="usage-chart-card card">
+                    <h3>Biểu đồ</h3>
+                    <p class="chart-desc">
+                        Biểu đồ chi tiêu tháng này của tôi.
+                    </p>
+                    <div class="chart-bars">
+                        <div class="chart-bar">
+                            <span>Ăn uống</span>
+                            <div class="chart-bar-track">
+                                <div class="chart-bar-fill" style="width: 40%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <span>Điện nước</span>
+                            <div class="chart-bar-track">
+                                <div class="chart-bar-fill" style="width: 20%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <span>Phòng</span>
+                            <div class="chart-bar-track">
+                                <div class="chart-bar-fill" style="width: 15%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <span>Sức khỏe</span>
+                            <div class="chart-bar-track">
+                                <div class="chart-bar-fill" style="width: 10%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <span>Học tập</span>
+                            <div class="chart-bar-track">
+                                <div class="chart-bar-fill" style="width: 10%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <span>Giải trí</span>
+                            <div class="chart-bar-track">
+                                <div class="chart-bar-fill" style="width: 5%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="disclaimer">
+                        * Đây là dự án cá nhân, mang tính vui vẻ. Bạn donate là đồng ý cười cùng nhau.
+                    </small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DONATE -->
+    <section id="donate" class="section section-alt">
+        <div class="container donate-grid">
+            <div>
+                <h2 class="section-title">Donate nếu bạn đang mỉm cười 😄</h2>
+                <p>
+                    Quét mã QR hoặc dùng nút bên cạnh.
+                    Bạn có thể đổi thông tin thành Momo/ZaloPay/Ngân hàng của bạn.
+                </p>
+                <ul class="donate-list">
+                    <li>Sau khi chuyển, bạn có thể tự điền nickname vào form (tự làm thêm).</li>
+                    <li>Số tiền và nội dung chuyển khoản sẽ xuất hiện ở phần log (fake/demo).</li>
+                    <li>Bạn hoàn toàn có thể fork repo này và custom theo ý mình.</li>
+                </ul>
+                <button class="btn btn-primary" id="fake-donate-btn">
+                    Donate ngay cho tôi 
+                </button>
+            </div>
+            <div class="donate-qr card">
+                <h3>Mã QR của mình</h3>
+                <div class="qr-placeholder">
+                    <!-- Thay bằng ảnh thật, ví dụ: assets/qr.png -->
+                    <span>QR CODE<br>PLACEHOLDER</span>
+                </div>
+                <!-- <p class="qr-note">
+                    Hãy thay bằng QR thật của bạn trước khi share/public.
+                </p> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE LOG -->
+    <section id="live-log" class="section">
+        <div class="container">
+            <h2 class="section-title">Log realtime (demo)</h2>
+            <div class="card">
+                <div id="log-list" class="log-list">
+                    <!-- script.js sẽ push thêm -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">FAQ – Mấy câu hỏi hay gặp</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Tại sao bạn lại làm trang này?</summary>
+                    <p>Vì vui. Và vì đói. Và vì mình thích làm web minh bạch kiểu “tự bóc phốt bản thân”.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Sao kê có thật không?</summary>
+                    <p>
+                        Trong bản demo GitHub này là dữ liệu giả lập.
+                        Khi bạn dùng cho riêng bạn, hãy nối vào Google Sheet, JSON, API… tùy thích.
+                    </p>
+                </details>
+                <details class="faq-item">
+                    <summary>Tôi được gì nếu donate?</summary>
+                    <p>
+                        Bạn có cảm giác “đã” khi nuôi thành công một con người,
+                        cộng thêm quyền xem người đó chi tiêu như thế nào.
+                    </p>
+                </details>
+                <details class="faq-item">
+                    <summary>Tôi có thể fork repo này không?</summary>
+                    <p>Hoàn toàn được. Nhớ đổi nội dung, text, QR, thương hiệu cho phù hợp với bạn.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <span>© <span id="year"></span> Nuôi Tôi (bản demo / parody).</span>
+        <span>Made with ❤️ &amp; instant noodles.</span>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
